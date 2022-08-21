@@ -1,8 +1,8 @@
-# Ip Address Tracker
+# IP Address Tracker
 
 This project tracks an IP address and/or domain name and displays the location on a map. 
-This project is a challenge from FrontEndMentor.com.  You can find the challenge landing page here : https://www.frontendmentor.io/challenges/ip-address-tracker-I8-0yYAH0/hub/ip-address-tracker-9Fh_sFdJgi
-
+This project is a challenge from FrontEndMentor.com.  You can find the challenge landing page [here](https://www.frontendmentor.io/challenges/ip-address-tracker-I8-0yYAH0/hub/ip-address-tracker-9Fh_sFdJgi
+)
 ## Technologies Used
  
 This application was created using: 
