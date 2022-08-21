@@ -12,18 +12,18 @@ This application was created using:
 - [The Geolocation DB API](https://geolocation-db.com/documentation)
 - [The Map Tiler API](https://docs.maptiler.com/cloud/api/maps/)
 
-### Getting Started
+## Getting Started
 ### Dependencies
 Before installing:
 ### `npm install react-dom`
 ### `npm install leaflet`
 ### `npm install react-leaflet`
 
-### Installing
+## Installing
 ### `npm install`
 
 
-### Executing program
+## Executing program
 ### `npm start` 
 To run a development server
 ### `npm run build`
