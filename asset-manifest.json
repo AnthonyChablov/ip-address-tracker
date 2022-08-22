@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/IP-Address-Tracker/static/css/main.f57438c1.css",
+    "main.js": "/IP-Address-Tracker/static/js/main.c30991d4.js",
+    "static/js/787.ae94230f.chunk.js": "/IP-Address-Tracker/static/js/787.ae94230f.chunk.js",
+    "static/media/pattern-bg.png": "/IP-Address-Tracker/static/media/pattern-bg.a60a3c85aa8b88aac4b7.png",
+    "index.html": "/IP-Address-Tracker/index.html",
+    "main.f57438c1.css.map": "/IP-Address-Tracker/static/css/main.f57438c1.css.map",
+    "main.c30991d4.js.map": "/IP-Address-Tracker/static/js/main.c30991d4.js.map",
+    "787.ae94230f.chunk.js.map": "/IP-Address-Tracker/static/js/787.ae94230f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f57438c1.css",
+    "static/js/main.c30991d4.js"
+  ]
+}
