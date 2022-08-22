@@ -37,9 +37,7 @@ const Hero = ({
               location = {location}
               timezone = {timezone}
               isp = {isp}
-              
             />
-            
         </div>
     </section>
   )
