@@ -26,30 +26,29 @@ h1, h2, h3, h4 {
 
 .hero {
   background: url("../assets/pattern-bg.png");
-  background-position-x: 52%;
   height: 40vh;
   text-align: center;
 }
 
 .hero__header {
-  padding-top: 35px;
+  padding-top: 2.1875em;
   color: white;
   font-weight: 500;
 }
 
 .hero__form {
-  padding-top: 20px;
+  padding-top: 1.25em;
 }
 .hero__form .form__control {
   width: 90%;
   max-width: 600px;
-  padding: 15px 18px;
+  padding: 0.9375em 1.125em;
   border: none;
-  border-radius: 13px;
+  border-radius: 0.8125em;
   font-size: 0.97rem;
   outline-width: 0;
   flex-grow: 2;
-  padding-right: 50px;
+  padding-right: 3.125em;
 }
 .hero__form .form__control:focus {
   outline: none;
@@ -64,7 +63,7 @@ h1, h2, h3, h4 {
   border: 0;
   position: relative;
   padding: 1.23em 1.8em;
-  border-radius: 0px 10px 10px 0;
+  border-radius: 0px 0.625em 0.625em 0;
   margin-left: -50px;
 }
 .hero__form .hero__btn:hover {
@@ -81,22 +80,22 @@ h1, h2, h3, h4 {
   right: 0;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 30px;
+  margin-top: 1.875em;
   z-index: 800;
-  padding: 25px 0;
+  padding: 1.5625em 0;
   -webkit-animation: fadeInAnimation ease 1.6s;
           animation: fadeInAnimation ease 1.6s;
 }
 .info .info__header {
   color: hsl(0deg, 0%, 59%);
   font-weight: 700;
-  font-size: 0.65rem;
+  font-size: 0.56rem;
   -webkit-animation: fadeInAnimation ease 1s;
           animation: fadeInAnimation ease 1s;
 }
 .info .info__data {
   font-weight: 500;
-  font-size: 1.3rem;
+  font-size: 1rem;
   -webkit-animation: fadeInAnimation ease 1s;
           animation: fadeInAnimation ease 1s;
 }
@@ -139,14 +138,14 @@ h1, h2, h3, h4 {
   .info .info__header {
     color: hsl(0deg, 0%, 59%);
     font-weight: 700;
-    font-size: 0.65rem;
+    font-size: 0.6rem;
   }
   .info .info__data {
     font-weight: 500;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
   }
 }
-@media (min-width: 62em) {
+@media (min-width: 75em) {
   .info {
     background-color: #fff;
     border-radius: 18px;

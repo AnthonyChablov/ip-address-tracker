@@ -1,6 +1,6 @@
 
 const InfoDisplay = ({
-    ip, location,timezone,isp,longitude,latitude,coordinates,
+    ip, location,timezone,isp,
 }) => {
   return (
     <section className='info'>

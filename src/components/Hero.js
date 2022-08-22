@@ -5,9 +5,8 @@ const Hero = ({
   onChangeIp, 
   onSubmit,
   formInputIp,
-  setFormInputIp,
 
-  ip, location,timezone,isp,longitude,latitude,coordinates,
+  ip, location,timezone,isp,
 
 }) => {
   return (
@@ -24,7 +23,7 @@ const Hero = ({
                     id='ip'
                     type="text" 
                     name='input-text'
-                    placeholder="Search for any IP address or domain"
+                    placeholder="Search for any IP address"
                     value = {formInputIp}
                     onChange= {onChangeIp}
                     required
@@ -38,9 +37,7 @@ const Hero = ({
               location = {location}
               timezone = {timezone}
               isp = {isp}
-              longitude = {longitude}
-              latitude = {latitude}
-              coordinates = {coordinates}
+              
             />
             
         </div>

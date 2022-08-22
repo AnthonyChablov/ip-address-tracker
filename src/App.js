@@ -1,12 +1,10 @@
 import {useState, useEffect} from 'react'
 import './App.css';
 import Hero from './components/Hero';
-import {geoLocationDummyData} from './components/data/GeoLocationData';
-import { MapContainer, Marker, Popup, TileLayer, useMap, useMapEvents } from 'react-leaflet';
+import { MapContainer, Marker, Popup, TileLayer, useMap,  ZoomControl} from 'react-leaflet';
 
 function App() {
   // Hooks //
-  const [geoLocationData, setGeoLocationData] = useState(geoLocationDummyData);
   const [ip, setIp]= useState(' ');
   const [location,setLocation] = useState(` `);
   const [timezone,setTimeZone] = useState(` `);
@@ -14,20 +12,17 @@ function App() {
   const [longitude, setLongitude] = useState('');
   const [latitude, setLatitude] = useState('');
   const [coordinates, setCoordinates] = useState('');
-  
   const [formInputIp, setFormInputIp] = useState('');
 
-  const [position, setPosition] = useState(null);
-
   useEffect(()=>{
-    
     console.log(`new ip :${ip}, fetching location`);
     getLocation();
   }, [ip, latitude]);
 
   useEffect(()=>{
     fetchUserIpAddress();
-  }, [])
+  }, []);
+
   // functions
   const fetchUserIpAddress =async ()=> {
     const res = await fetch("https://geolocation-db.com/json/");
@@ -106,15 +101,16 @@ function App() {
             { lat: latitude, lng: longitude }
           }
           zoom={13}
+          zoomControl={false}
           scrollWheelZoom={false}
-          style={{ width: "100vw", height: "60vh" }}
+          style={{ width: "100vw", height: "60vh" }} 
         >
-          <TileLayer
+          <TileLayer    
             attribution='<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>'
             url={`https://api.maptiler.com/maps/hybrid/{z}/{x}/{y}.jpg?key=${'uxvh9L9qGcEE5OCfKS21'}`}
           />
           <MyComponent/>
-          
+          <ZoomControl position='bottomright' />
         </MapContainer>
       )
     }
