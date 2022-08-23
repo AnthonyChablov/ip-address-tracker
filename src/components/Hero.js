@@ -5,7 +5,6 @@ const Hero = ({
   onChangeIp, 
   onSubmit,
   formInputIp,
-
   ip, location,timezone,isp,
 
 }) => {

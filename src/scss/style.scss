@@ -28,16 +28,16 @@ h1,h2,h3,h4{
 .hero {
     background: url('../assets/pattern-bg.png');
     
-    height: 40vh;
+    height: 35vh;
     text-align: center;
 }
 .hero__header{
-    padding-top: 2.1875em;
+    padding-top: 0.6em;
     color: white;
     font-weight: 500;
 }
 .hero__form{
-    padding-top: 1.25em;
+    padding-top: 0.5em;
 
     .form__control{
         width: 90%;
@@ -84,9 +84,9 @@ h1,h2,h3,h4{
     right: 0;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 1.875em;
+    margin-top: 0.66em;
     z-index: 800;
-    padding: 1.5625em 0;
+    padding: 1.2em 0;
 
     .info__header{
         color: $dark-grey;
@@ -96,7 +96,7 @@ h1,h2,h3,h4{
     }
     .info__data{
         font-weight: 500;
-        font-size: 1rem;
+        font-size: 0.89rem;
         animation: fadeInAnimation ease 1s;
     }
     animation: fadeInAnimation ease 1.6s;
@@ -118,58 +118,51 @@ h1,h2,h3,h4{
 
 // mobile
 @media(min-width:43.75em){ // on screens 700px or less
-    .info{
-        background-color: #fff;
-        border-radius: 18px;
-        width: 80%;
-        position: absolute;
-        left: 0;
-        right: 0;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 30px;
-        z-index: 800;
-        padding: 25px 0;
     
+    .info{
         .info__header{
-            color: $dark-grey;
-            font-weight: 700;
-            font-size: 0.60rem;
+            font-size: 0.7rem;
         }
         .info__data{
-            font-weight: 500;
-            font-size: 1.1rem;
+            font-size: 1rem;
         }
+        padding-top: 0.9em;
+        padding-bottom: 0.2em;
     }
-    
-}
+
+} 
 //tablet
 @media (min-width:75em) { // for screens 1200 px or less
+    .hero__header{
+        padding-top: 1.1em ;
+        padding-bottom: 0.65em;
+        font-size: 2rem;
+    }
     .info{
         background-color: #fff;
-        border-radius: 18px;
+        border-radius: 1.125em;
         width: 80%;
         position: absolute;
         left: 0;
         right: 0;
         margin-left: auto;
         margin-right: auto;
-        margin-top: 30px;
+        margin-top: 2.6875em;
         z-index: 800;
-        padding: 25px 0;
-
+        padding: 1.5625em 0;
         display: flex;
         flex-direction: row;
         justify-content: space-around;
 
         .info__item + .info__item{
             border-left: 1px solid $dark-grey;
-            padding-left: 30px;
+            padding-left: 1.875em;
         }
         .info__header{
             color: $dark-grey;
             font-weight: 700;
             font-size: 0.65rem;
+            text-align: left;
         }
         .info__data{
             font-weight: 500;

@@ -2,6 +2,8 @@ import {useState, useEffect} from 'react'
 import './App.css';
 import Hero from './components/Hero';
 import { MapContainer, Marker, Popup, TileLayer, useMap,  ZoomControl} from 'react-leaflet';
+import {ToastContainer, toast, Zoom, Bounce} from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   // Hooks //
@@ -77,9 +79,23 @@ function App() {
       </Marker>
     );
   }
+
+  const Popup = ()=>{
+    toast.error("Oh no error");
+    toast.success('You passed');
+    return <>
+      <ToastContainer
+        draggable={false}
+        transition={Zoom}
+        autoClose={8000}
+      />
+    </>
+  }
   
   return (
   <>
+    <Popup/>
+    
     <Hero 
       onChangeIp = {onChangeHandlerIp}
       onSubmit = {onSubmitHandler}
@@ -94,6 +110,7 @@ function App() {
       latitude = {latitude}
       coordinates = {coordinates}
     />
+    <ToastContainer/>
     {
       latitude && (
         <MapContainer
@@ -103,7 +120,7 @@ function App() {
           zoom={13}
           zoomControl={false}
           scrollWheelZoom={false}
-          style={{ width: "100vw", height: "60vh" }} 
+          style={{ width: "100vw", height: "65vh" }} 
         >
           <TileLayer    
             attribution='<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>'
