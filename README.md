@@ -14,7 +14,7 @@ This application was created using:
 
 ## Getting Started
 ### Dependencies
-Before installing:
+These are dependencies this application relies on:
 ### `react-dom`
 ### `leaflet`
 ### `react-leaflet`
