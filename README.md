@@ -15,9 +15,9 @@ This application was created using:
 ## Getting Started
 ### Dependencies
 Before installing:
-### `npm install react-dom`
-### `npm install leaflet`
-### `npm install react-leaflet`
+### `react-dom`
+### `leaflet`
+### `react-leaflet`
 
 ## Installing
 ### `npm install`
