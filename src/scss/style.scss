@@ -9,9 +9,11 @@ $rubik:'Rubik', sans-serif;;
     box-sizing: border-box;
     padding: 0;
     font-family: $rubik;
+    
 }
 body{
     margin: 0 auto;
+    height: 100vh;
 }
 img{
     max-width: 100%;
@@ -27,53 +29,67 @@ h1,h2,h3,h4{
 }
 .hero {
     background: url('../assets/pattern-bg.png');
-    
-    height: 35vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 28vh;
+    //height: 300px;
     text-align: center;
 }
 .hero__header{
-    padding-top: 0.6em;
+    padding-top: 9.6px;
     color: white;
     font-weight: 500;
 }
 .hero__form{
-    padding-top: 0.5em;
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    width: 60%;
+    max-width: 600px;
+    height: 56px;
+    margin-top: 1em;
+    
+    margin-left: auto;
+    margin-right: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    border-radius: 15px;
+    overflow: hidden;
 
     .form__control{
         width: 90%;
-        max-width: 600px;
-        padding: 0.9375em 1.125em;
-        border: none;
-        border-radius: 0.8125em;
-
-        font-size: 0.97rem;
-        
-        outline-width:0;
-        flex-grow: 2;
-        padding-right: 3.125em;
+        font-size: 0.9rem;
+        flex: 1;
+        height: 100%;
+        color: #111;
+        padding: 0 1.15em;
+        border: transparent;
+        border-radius: 0;
     }
+
     .form__control:focus{
         outline: none;
     }
     .form__control:hover{
         cursor: pointer;
     }
+
     .hero__btn{
-        display: inline-block;
-        background-color: black;
+        font-size: 1.1rem;
+        width: 55px;
+        height: 100%;
+        flex: none;
+        border: none;
+        background-color: $very-dark-grey;
+        cursor: pointer;
         color: #fff;
-        border: 0;
-        position: relative;
-        padding: 1.23em 1.8em;
-        border-radius: 0px 0.625em
-        0.625em 0;
-        
-        margin-left: -50px;
     }
     .hero__btn:hover{
-        filter: opacity(78%);
-        cursor: pointer;
+        filter: brightness(160%);
     }
+
+
 }
 .info{
     background-color: #fff;
@@ -84,9 +100,10 @@ h1,h2,h3,h4{
     right: 0;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 0.66em;
+    margin-top:10.56px;
     z-index: 800;
     padding: 1.2em 0;
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 
     .info__header{
         color: $dark-grey;
@@ -101,9 +118,7 @@ h1,h2,h3,h4{
     }
     animation: fadeInAnimation ease 1.6s;
 }
-#map{
-    height: 80vh;
-}
+
 
 /* Animations */
 @keyframes fadeInAnimation {
@@ -117,8 +132,7 @@ h1,h2,h3,h4{
 
 
 // mobile
-@media(min-width:43.75em){ // on screens 700px or less
-    
+@media(min-width:700px){ // on screens 700px or less
     .info{
         .info__header{
             font-size: 0.7rem;
@@ -126,16 +140,30 @@ h1,h2,h3,h4{
         .info__data{
             font-size: 1rem;
         }
-        padding-top: 0.9em;
-        padding-bottom: 0.2em;
+        padding-top: 14.4px;
+        padding-bottom:  3.2px;
     }
 
 } 
 //tablet
-@media (min-width:75em) { // for screens 1200 px or less
+@media (min-width: 1200px) { // for screens 1200 px or less
+    .hero__form{
+        max-width: 600px;
+        height: 56px;
+        margin-top: 1em;
+        
+        .form__control{
+            width: 90%;
+            font-size: 1.135rem;
+        }
+        .hero__btn{
+            font-size: 1.3rem;
+        }
+    }
+    
     .hero__header{
-        padding-top: 1.1em ;
-        padding-bottom: 0.65em;
+        padding-top: 20.6px;
+        padding-bottom: 15.4px;
         font-size: 2rem;
     }
     .info{
@@ -147,16 +175,16 @@ h1,h2,h3,h4{
         right: 0;
         margin-left: auto;
         margin-right: auto;
-        margin-top: 2.6875em;
+        margin-top: 43px;
         z-index: 800;
-        padding: 1.5625em 0;
+        padding: 37px 0;
         display: flex;
         flex-direction: row;
         justify-content: space-around;
 
         .info__item + .info__item{
             border-left: 1px solid $dark-grey;
-            padding-left: 1.875em;
+            padding-left: 30px;
         }
         .info__header{
             color: $dark-grey;
@@ -172,6 +200,24 @@ h1,h2,h3,h4{
 }
 
 //desktop
-@media (min-width:87em){ // 1392 px or less
+@media (min-width:1392px){ // 1392 px or less
+    .hero__header{
+        padding-top: 20.6px;
+        padding-bottom: 17.4px;
+        font-size: 2rem;
+    }
+    .info{
+        padding: 40px 0;
+    }
+}
 
+@media screen and (min-width: 1600px) {
+    .hero__header{
+        padding-top: 20.6px;
+        padding-bottom: 17.4px;
+        font-size: 2rem;
+    }
+    .info{
+        padding: 40px 0;
+    }
 }

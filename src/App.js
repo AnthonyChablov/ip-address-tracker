@@ -80,21 +80,11 @@ function App() {
     );
   }
 
-  const Popup = ()=>{
-    toast.error("Oh no error");
-    toast.success('You passed');
-    return <>
-      <ToastContainer
-        draggable={false}
-        transition={Zoom}
-        autoClose={8000}
-      />
-    </>
-  }
+  
   
   return (
-  <>
-    <Popup/>
+  <body>
+    
     
     <Hero 
       onChangeIp = {onChangeHandlerIp}
@@ -113,25 +103,28 @@ function App() {
     <ToastContainer/>
     {
       latitude && (
-        <MapContainer
-          center={
-            { lat: latitude, lng: longitude }
-          }
-          zoom={13}
-          zoomControl={false}
-          scrollWheelZoom={false}
-          style={{ width: "100vw", height: "65vh" }} 
-        >
-          <TileLayer    
-            attribution='<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>'
-            url={`https://api.maptiler.com/maps/hybrid/{z}/{x}/{y}.jpg?key=${'uxvh9L9qGcEE5OCfKS21'}`}
-          />
-          <MyComponent/>
-          <ZoomControl position='bottomright' />
-        </MapContainer>
+        
+          <MapContainer
+            className='map'
+            center={
+              { lat: latitude, lng: longitude }
+            }
+            zoom={13}
+            zoomControl={false}
+            scrollWheelZoom={false}
+            style={{ height:"72vh" }} 
+          >
+            <TileLayer    
+              attribution='<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>'
+              url={`https://api.maptiler.com/maps/hybrid/{z}/{x}/{y}.jpg?key=${'uxvh9L9qGcEE5OCfKS21'}`}
+            />
+            <MyComponent/>
+            <ZoomControl position='bottomright' />
+          </MapContainer>
+        
       )
     }
-  </>
+  </body>
   );
 }
 export default App;
