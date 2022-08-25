@@ -31,7 +31,8 @@ h1,h2,h3,h4{
     background: url('../assets/pattern-bg.png');
     background-size: cover;
     background-repeat: no-repeat;
-    height: 28vh;
+    height: 35vh;
+    
     //height: 300px;
     text-align: center;
 }
@@ -44,22 +45,19 @@ h1,h2,h3,h4{
     box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
     width: 60%;
     max-width: 600px;
-    height: 56px;
-    margin-top: 1em;
-    
+    height: 35px;
+    margin-top: 0.3em;
     margin-left: auto;
     margin-right: auto;
-
     display: flex;
     justify-content: center;
     align-items: center;
-    
-    border-radius: 15px;
+    border-radius: 10px;
     overflow: hidden;
 
     .form__control{
         width: 90%;
-        font-size: 0.9rem;
+        font-size: 0.8rem;
         flex: 1;
         height: 100%;
         color: #111;
@@ -76,8 +74,8 @@ h1,h2,h3,h4{
     }
 
     .hero__btn{
-        font-size: 1.1rem;
-        width: 55px;
+        font-size: 0.8rem;
+        width: 40px;
         height: 100%;
         flex: none;
         border: none;
@@ -88,8 +86,6 @@ h1,h2,h3,h4{
     .hero__btn:hover{
         filter: brightness(160%);
     }
-
-
 }
 .info{
     background-color: #fff;
@@ -100,25 +96,24 @@ h1,h2,h3,h4{
     right: 0;
     margin-left: auto;
     margin-right: auto;
-    margin-top:10.56px;
+    margin-top: 6px;
     z-index: 800;
-    padding: 1.2em 0;
+    padding: 0.8em 0;
     box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 
     .info__header{
         color: $dark-grey;
         font-weight: 700;
-        font-size: 0.56rem;
+        font-size: 0.45rem;
         animation: fadeInAnimation ease 1s;
     }
     .info__data{
         font-weight: 500;
-        font-size: 0.89rem;
+        font-size: 0.6rem;
         animation: fadeInAnimation ease 1s;
     }
     animation: fadeInAnimation ease 1.6s;
 }
-
 
 /* Animations */
 @keyframes fadeInAnimation {
@@ -130,9 +125,11 @@ h1,h2,h3,h4{
      }
 }
 
-
-// mobile
+// tablet small screen
 @media(min-width:700px){ // on screens 700px or less
+    .hero{
+        height: 300px;
+    }
     .info{
         .info__header{
             font-size: 0.7rem;
@@ -147,6 +144,7 @@ h1,h2,h3,h4{
 } 
 //tablet
 @media (min-width: 1200px) { // for screens 1200 px or less
+    
     .hero__form{
         max-width: 600px;
         height: 56px;
@@ -201,6 +199,7 @@ h1,h2,h3,h4{
 
 //desktop
 @media (min-width:1392px){ // 1392 px or less
+    
     .hero__header{
         padding-top: 20.6px;
         padding-bottom: 17.4px;
