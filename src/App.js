@@ -2,8 +2,9 @@ import {useState, useEffect} from 'react'
 import './App.css';
 import Hero from './components/Hero';
 import { MapContainer, Marker, Popup, TileLayer, useMap,  ZoomControl} from 'react-leaflet';
-import {ToastContainer, toast, Zoom, Bounce} from "react-toastify";
+import {ToastContainer} from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { toast } from 'react-toastify';
 
 function App() {
   // Hooks //
@@ -24,8 +25,15 @@ function App() {
   useEffect(()=>{
     fetchUserIpAddress();
   }, []);
+  useEffect(()=>{
+    adBlockMsg()
+  },[]);
 
   // functions
+
+  const adBlockMsg=()=>{
+    toast.info('Please disable adblock for this app to work.')
+  }
   const fetchUserIpAddress =async ()=> {
     const res = await fetch("https://geolocation-db.com/json/");
     const data = await res.json();
@@ -80,12 +88,8 @@ function App() {
     );
   }
 
-  
-  
   return (
-  <body>
-    
-    
+  <>
     <Hero 
       onChangeIp = {onChangeHandlerIp}
       onSubmit = {onSubmitHandler}
@@ -124,7 +128,10 @@ function App() {
         
       )
     }
-  </body>
+    <ToastContainer
+      
+    />
+  </>
   );
 }
 export default App;
