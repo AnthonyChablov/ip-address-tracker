@@ -24,10 +24,10 @@ function App() {
 
   useEffect(()=>{
     fetchUserIpAddress();
+    adBlockMsg();
   }, []);
-  useEffect(()=>{
-    adBlockMsg()
-  },[]);
+  
+  
 
   // functions
 
@@ -76,6 +76,7 @@ function App() {
   }
 
   const MyComponent = ()=>{
+    
     const map = useMap();
     const mapCenter = map.getCenter();
     console.log(`map center: ${mapCenter}`);
@@ -87,7 +88,7 @@ function App() {
       </Marker>
     );
   }
-
+  
   return (
   <>
     <Hero 
