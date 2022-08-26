@@ -18,6 +18,7 @@ These are dependencies this application relies on:
 - react-dom
 - leaflet
 - react-leaflet
+- react-toastify
 
 ## Installing
 ### `npm install`
