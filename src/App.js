@@ -88,7 +88,10 @@ function App() {
       </Marker>
     );
   }
-  
+
+  let height = '65vh'; 
+  console.log(height);
+
   return (
   <>
     <Hero 
@@ -117,12 +120,13 @@ function App() {
             zoom={13}
             zoomControl={false}
             scrollWheelZoom={false}
-            style={{ height:"72vh" }} 
+            style={{ height }} 
           >
             <TileLayer    
               attribution='<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>'
               url={`https://api.maptiler.com/maps/hybrid/{z}/{x}/{y}.jpg?key=${'uxvh9L9qGcEE5OCfKS21'}`}
             />
+
             <MyComponent/>
             <ZoomControl position='bottomright' />
           </MapContainer>
